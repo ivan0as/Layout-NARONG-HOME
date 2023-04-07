@@ -1,0 +1,109 @@
+/* 
+ * Stepper v3.0.8 - 2015-04-04 
+ * A jQuery plugin for cross browser number inputs. Part of the Formstone Library. 
+ * http://classic.formstone.it/stepper/ 
+ * 
+ * Copyright 2015 Ben Plum; MIT Licensed 
+ */ 
+
+	.stepper {
+    border-radius:0px;
+/*    margin: 0 0 10px 0;*/
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+       
+}
+
+.stepper .stepper-input {
+    background: #fff;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+    overflow: hidden;
+    padding: 9px 50px 10px;
+    width: 100%;
+    z-index: 49;
+/*    padding: 1px 15px 0 20px;*/
+    -moz-appearance: textfield;
+     height: 31px;
+}
+
+.stepper .stepper-input::-webkit-inner-spin-button,
+.stepper .stepper-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.stepper .stepper-input:focus {
+    background-color: #fff;
+}
+
+.stepper .stepper-arrow {
+/*    background: #eee url(jquery.fs.stepper-arrows.png) no-repeat;*/
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    text-indent: -99999px;
+    width: 31px;
+    z-index: 50;
+    
+}
+
+
+
+.stepper .stepper-arrow.up {
+    background-position: 4px 2px;
+    border-bottom: none;
+    top: 0px;
+    background: #ededed url("../images/pls.png") center  no-repeat;   
+}
+
+.stepper .stepper-arrow.up:hover {
+
+    background: #ccc url("../images/pls.png") center  no-repeat;   
+}
+
+.stepper .stepper-arrow.down:hover {
+
+    background: #ccc url("../images/mns.png") center  no-repeat;   
+}
+
+.stepper .stepper-arrow.down {
+    background-position: center bottom;
+    bottom: 0;
+    left: 0;
+    background: #ededed url("../images/mns.png") center no-repeat;  
+}
+
+@media screen and (min-width: 740px) {
+    .stepper:hover .stepper-input {
+        background-color: #fff;
+    }
+    .stepper .stepper-step:hover {
+        background-color: #F9F9F9;
+    }
+    .stepper.disabled .stepper-arrow {
+        background: #fff;
+        border-color: #eee;
+        cursor: default;
+    }
+}
+
+.stepper.disabled .stepper-input {
+    background: #fff;
+    border-color: #eee;
+    color: #ccc;
+}
+
+.stepper.disabled .stepper-arrow {
+    background: #fff;
+    border-color: #eee;
+    cursor: default;
+}
